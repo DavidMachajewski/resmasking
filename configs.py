@@ -15,7 +15,7 @@ class Arguments:
             "momentum": 0.9,
             "weight_decay": 0.001,
             "distributed": 0,
-            "batch_size": 2,
+            "batch_size": 32,
             "num_workers": 2,
             "device": "cuda:0",  # "cuda:0", # "cpu"
             "max_epoch_num": 50,
