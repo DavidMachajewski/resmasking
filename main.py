@@ -22,8 +22,13 @@ if __name__ == '__main__':
     train_network(args, cnf)
 
 
+# /home/shared/AffectiveAI/data/fer2013/train_ids_0.csv
+# CUDA_VISIBLE_DEVICES=0 python main.py --DATASET "FER" --FER2013PTR "D:\datasets\fer\fer\train_ids_0.csv" --FER2013PTE "D:\datasets\fer\fer\test_ids_0.csv" --FER2013PVA "D:\datasets\fer\fer\valid_ids_0.csv"
 
-# python --DATASET "FER" --FER2013PTR "D:\datasets\fer\fer\train_ids_0.csv" --FER2013PTE "D:\datasets\fer\fer\test_ids_0.csv" --FER2013PVA "D:\datasets\fer\fer\valid_ids_0.csv" main.py
+
+
+# CUDA_VISIBLE_DEVICES=3 python main.py --DATASET "FER" --FER2013PTR "/home/shared/AffectiveAI/data/fer2013/train_ids_0.csv" --FER2013PTE "/home/shared/AffectiveAI/data/fer2013/test_ids_0.csv" --FER2013PVA"
+
 
 #
 # Set-ExecutionPolicy Unrestricted -Scope Process

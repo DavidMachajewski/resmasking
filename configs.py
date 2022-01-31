@@ -15,8 +15,8 @@ class Arguments:
             "momentum": 0.9,
             "weight_decay": 0.001,
             "distributed": 0,
-            "batch_size": 32,
-            "num_workers": 2,
+            "batch_size": 64,
+            "num_workers": 4,
             "device": "cuda:0",  # "cuda:0", # "cpu"
             "max_epoch_num": 50,
             "max_plateau_count": 6,
@@ -38,5 +38,8 @@ class Arguments:
         parser.add_argument('--FER2013PTR', type=str, help="PATH TO THE TRAINING SPLIT OF FER2013")
         parser.add_argument('--FER2013PTE', type=str, help="PATH TO THE TESTING SPLIT OF FER2013")
         parser.add_argument('--FER2013PVA', type=str, help="PATH TO THE VALIDATION SPLIT OF FER2013")
+
+        # # # preprocessing # # #
+        parser.add_argument('--PREP_SAVE_TO', type=str)
 
         return parser.parse_args()
