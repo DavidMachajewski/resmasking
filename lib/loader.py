@@ -61,9 +61,9 @@ def FER2013_dataloader(args, transforms_new_size):
     print(f"created testset of size: {len(testset)}")
     print(f"created valset of size: {len(valset)}")
 
-    traindl = torch.utils.data.DataLoader(trainset, batch_size=64, shuffle=True, num_workers=2, drop_last=True)
-    testdl = torch.utils.data.DataLoader(testset, batch_size=64, shuffle=True, num_workers=2, drop_last=True)
-    valdl = torch.utils.data.DataLoader(valset, batch_size=64, shuffle=True, num_workers=2, drop_last=True)
+    traindl = torch.utils.data.DataLoader(trainset, batch_size=48, shuffle=True, num_workers=8, drop_last=True)
+    testdl = torch.utils.data.DataLoader(testset, batch_size=48, shuffle=True, num_workers=8, drop_last=True)
+    valdl = torch.utils.data.DataLoader(valset, batch_size=48, shuffle=True, num_workers=8, drop_last=True)
     return traindl, testdl, valdl
 
 
