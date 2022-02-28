@@ -10,7 +10,7 @@ class Arguments:
             "in_channels": 3,
             "num_classes": 7,
             "arch": "resmasking_dropout1",  # alexnet
-            "lr": 0.0001,
+            "lr": 0.001,
             "weighted_loss": 0,
             "momentum": 0.9,
             "weight_decay": 0.001,
@@ -20,7 +20,7 @@ class Arguments:
             "device": "cuda:0",  # "cuda:0", # "cpu"
             "max_epoch_num": 50,
             "max_plateau_count": 8,
-            "plateau_patience": 2,
+            "plateau_patience": 3,
             "steplr": 50,
             "log_dir": "saved/logs/",
             "checkpoint_dir": "saved/checkpoints/",

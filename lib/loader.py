@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 import torch
 import pandas as pd
 import numpy as np
@@ -6,6 +8,10 @@ from torchvision import transforms
 from PIL import Image
 from lib.pipeline import Sample, get_transforms
 from typing import List
+
+
+class CKP(torch.utils.data.Dataset):
+    pass
 
 
 class FER2013(torch.utils.data.Dataset):
@@ -72,7 +78,6 @@ def FER2013_dataloader(args, transforms_new_size):
 #               JAFFE Dataloader
 #
 # # # # # # # # # # # # # # # # # # # # # # # # #
-
 class JAFFE(torch.utils.data.Dataset):
     """Implementation of the JAFFE dataset by subclassing PyTorch's dataset class."""
 
@@ -189,6 +194,6 @@ def get_loaders(args):
     if args.DATASET == "FER":
         traindl, testdl, valdl = FER2013_dataloader(args=args, transforms_new_size=[224, 224])
     #elif args.DATASET == "JAFFE":
-    #    pass
+    #    traindl, testdl, valdl = JAFFE_dataloader()
 
     return traindl, testdl, valdl

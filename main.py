@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
 
 
-# CUDA_VISIBLE_DEVICES=3 python main.py --DATASET "FER" --FER2013PTR "/home/shared/AffectiveAI/data/fer2013/train_ids_0.csv" --FER2013PTE "/home/shared/AffectiveAI/data/fer2013/test_ids_0.csv" --FER2013PVA"
+# CUDA_VISIBLE_DEVICES=3 python main.py --DATASET "FER" --FER2013PTR "/home/shared/AffectiveAI/data/fer2013/train_ids_0.csv" --FER2013PTE "/home/shared/AffectiveAI/data/fer2013/test_ids_0.csv" --FER2013PVA "/home/shared/AffectiveAI/data/fer2013/valid_ids_0.csv"
 
 
 #
